@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>TikTok Auth Callback</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;max-width:720px;margin:40px auto;line-height:1.6}
+    code{background:#f5f5f5;padding:2px 4px;border-radius:4px}
+  </style>
+</head>
+<body>
+  <h1>TikTok Auth Callback</h1>
+  <p>Below are the query parameters returned by TikTok after authorization:</p>
+  <pre id="out">Parsing…</pre>
+  <script>
+    const params = Object.fromEntries(new URL(location.href).searchParams.entries());
+    document.getElementById('out').textContent = JSON.stringify(params, null, 2);
+  </script>
+</body>
+</html>
